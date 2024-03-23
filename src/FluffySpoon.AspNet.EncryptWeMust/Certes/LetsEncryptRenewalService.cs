@@ -36,8 +36,8 @@ namespace FluffySpoon.AspNet.EncryptWeMust.Certes
 			_semaphoreSlim = new SemaphoreSlim(1);
 		}
 
-		internal static IAbstractCertificate Certificate { get; private set; }
-		
+		public static IAbstractCertificate Certificate { get; private set; }
+
 		public Uri LetsEncryptUri => _options.LetsEncryptUri;
 		
 		public async Task StartAsync(CancellationToken cancellationToken)
